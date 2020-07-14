@@ -8,10 +8,11 @@
 class GameObject
 {
 public:
-	GameObject(const std::string name);
-
-
-	const std::string GetName();
+	//constリファレンスを使用
+	GameObject(const std::string& name);
+	
+	//const参照型の戻り値（仕様用途はconstリファレンスと同じ）
+	const std::string& GetName();
 
 private:
 
