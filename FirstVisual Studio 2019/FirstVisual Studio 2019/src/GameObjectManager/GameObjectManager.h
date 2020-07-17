@@ -1,7 +1,7 @@
 #pragma once
-#include <string>
-#include <forward_list>
-#include <iostream>
+#include <string>       //•¶š—ñ
+#include <forward_list> //‘O•û”z—ñ
+#include <memory>       //std::shared_ptrEstd::weak_ptr
 
 class GameObject;
 
