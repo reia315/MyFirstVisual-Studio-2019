@@ -1,7 +1,6 @@
 #pragma once
-#include <list>
 #include <string>
-#include <vector>
+#include <forward_list>
 #include <iostream>
 
 class GameObject;
@@ -14,5 +13,5 @@ public:
 	std::weak_ptr<GameObject> GeneratGameObject(const std::string& name);
 
 private:
-	std::vector<std::shared_ptr<GameObject>> m_gameObject;
+	std::forward_list<std::shared_ptr<GameObject>> m_gameObject;
 };
