@@ -4,9 +4,9 @@ GameObjectManager::GameObjectManager()
 {
 }
 
-GameObject GameObjectManager::GeneratGameObject(const std::string& name)
+std::weak_ptr<GameObject> GameObjectManager::GeneratGameObject(const std::string& name)
 {
-	GameObject gameObject =GameObject(name);
+	auto gameObject =std::make_shared<GameObject>(name);
 	m_gameObject.push_back(gameObject);
 	return gameObject;
 }
