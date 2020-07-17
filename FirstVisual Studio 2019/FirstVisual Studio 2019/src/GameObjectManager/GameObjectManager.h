@@ -1,7 +1,7 @@
 #pragma once
 #include <string>       //文字列
 #include <forward_list> //前方配列
-#include <memory>       //std::shared_ptr・std::weak_ptr
+#include <memory>       //スマートポインタ
 
 class GameObject;
 
