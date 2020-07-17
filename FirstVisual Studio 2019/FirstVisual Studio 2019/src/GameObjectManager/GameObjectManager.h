@@ -2,15 +2,17 @@
 #include <list>
 #include <string>
 #include <vector>
-#include "../GameObject/GameObject.h"
+#include <iostream>
+
+class GameObject;
 
 class GameObjectManager
 {
 public:
 	GameObjectManager();
 
-	GameObject GeneratGameObject(const std::string& name);
+	std::weak_ptr<GameObject> GeneratGameObject(const std::string& name);
 
 private:
-	std::vector<GameObject> m_gameObject;
+	std::vector<std::weak_ptr<GameObject>> m_gameObject;
 };
