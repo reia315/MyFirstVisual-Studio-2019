@@ -1,4 +1,7 @@
 #include "GameObjectManager.h"
+#include "../GameObject/GameObject.h"
+
+std::forward_list<std::shared_ptr<GameObject>>m_gameObject;
 
 GameObjectManager::GameObjectManager()
 {
