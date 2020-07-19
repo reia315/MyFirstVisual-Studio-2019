@@ -1,4 +1,8 @@
 #pragma once
+#include <memory>
+
+//‘O•ûéŒ¾
+class GameObject;
 
 class Component
 {
@@ -10,4 +14,10 @@ public:
 	void Update();
 	//•`‰æˆ—
 	void Draw();
+
+	void SetGameObject(std::weak_ptr<GameObject> gameObject);
+private:
+
+	std::weak_ptr<GameObject>m_gameObject;
+	
 };
