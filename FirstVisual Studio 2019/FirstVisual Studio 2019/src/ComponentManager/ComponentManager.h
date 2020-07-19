@@ -1,6 +1,6 @@
 #pragma once
-#include <list>　　//前方配列
-#include <memory>　　　　　//スマートポインタ
+#include <list>//前方配列
+#include <memory>//スマートポインタ
 
 class Component;
 
@@ -13,7 +13,7 @@ public:
 	//描画
 	static void draw();
 	//コンポーネントクラスの生成
-	static std::weak_ptr<Component> GeneratComponent();
+    static std::weak_ptr<Component> GeneratComponent();
 
 
 private:
