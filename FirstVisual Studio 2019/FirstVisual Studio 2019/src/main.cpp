@@ -10,50 +10,66 @@ int main()
 {
 	//コマンド入力値
 	string command="";
+	bool count = true;
+	
+	{
+		auto component = ComponentManager::GenerateComponent();
+		GameObjectManager::GenerateGameObject("ObjectA").lock()->AddComponent(component);
+	}
+	{
+		auto component = ComponentManager::GenerateComponent();
+		GameObjectManager::GenerateGameObject("ObjectB").lock()->AddComponent(component);
+	}
 
-	GameObjectManager::GeneratGameObject("ObjectA").lock()->AddComponent();
-
-	cout << "プログラム開始" << endl;
+	std::cout << "プログラム開始" << endl;
 
 	//コマンド判別
 	while (command!="end")
 	{
-		cout << "フレーム更新" << endl;
+		std::cout << "フレーム更新" << endl;
 
-		ComponentManager::update();
-        
-		cout << endl;
-
-		ComponentManager::draw();
-
-		cout<<endl;
-
-			//updateとdrawの表示
-		cin >> command;
-
-	    if (command == "a")
+		if (command == "a" || count == true)
 		{
 			ComponentManager::update();
 
-			cout << endl;
+			std::cout << endl;
 
 			ComponentManager::draw();
 
-			cout << endl;
+			std::cout << endl;
+
+			//updateとdrawの表示
+			
+			count = false;
 		}
-		else if (command == "add")
+
+		cin >> command;
+	
+
+	    if (command == "add")
 		{
 		    string name;
-			cout << "オブジェクト名入力 ->";
+			std::cout << "オブジェクト名入力 ->";
 			cin >> name;
 
-			GameObjectManager::GeneratGameObject(name).lock()->AddComponent();
+			{
+				auto component = ComponentManager::GenerateComponent();
+				GameObjectManager::GenerateGameObject(name).lock()->AddComponent(component);
+			}		
+
+			ComponentManager::update();
+
+			std::cout << endl;
+
+			ComponentManager::draw();
+
+			std::cout << endl;
 		}
 
-		cout << endl;
+		std::cout << endl;
 		
 	}
 
 	//終了時に入力
-	cout << "プログラム終了" << endl;
+	std::cout << "プログラム終了" << endl;
 }
