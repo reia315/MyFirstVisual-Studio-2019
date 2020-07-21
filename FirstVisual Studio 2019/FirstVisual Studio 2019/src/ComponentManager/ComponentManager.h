@@ -13,7 +13,7 @@ public:
 	//描画
 	static void draw();
 	//コンポーネントクラスの生成
-    static std::weak_ptr<Component> GeneratComponent();
+    static std::weak_ptr<Component> GenerateComponent();
 
 
 private:
