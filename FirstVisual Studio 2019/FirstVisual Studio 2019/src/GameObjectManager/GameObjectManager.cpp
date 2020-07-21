@@ -3,10 +3,6 @@
 
 std::forward_list<std::shared_ptr<GameObject>>GameObjectManager::m_gameObject;
 
-GameObjectManager::GameObjectManager()
-{
-}
-
 std::weak_ptr<GameObject> GameObjectManager::GenerateGameObject(const std::string& name)
 {
 	auto gameObject =std::make_shared<GameObject>(name);
