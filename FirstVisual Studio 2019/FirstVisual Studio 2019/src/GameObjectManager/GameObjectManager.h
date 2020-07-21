@@ -10,7 +10,7 @@ class GameObjectManager
 public:
 	GameObjectManager();
 
-	static std::weak_ptr<GameObject> GeneratGameObject(const std::string& name);
+	static std::weak_ptr<GameObject> GenerateGameObject(const std::string& name);
 
 private:
 	static std::forward_list<std::shared_ptr<GameObject>> m_gameObject;
