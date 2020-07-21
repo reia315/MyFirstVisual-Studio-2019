@@ -9,9 +9,9 @@ const std::string& GameObject::GetName()const
 	return m_name;
 }
 
-void GameObject::AddComponent()
+void GameObject::AddComponent(const std::weak_ptr<Component>& component)
 {
-	auto component = ComponentManager::GeneratComponent();
+	//auto component = ComponentManager::GeneratComponent();
 	component.lock()->SetGameObject(weak_from_this());
 	m_components.push_back(component);
 }
