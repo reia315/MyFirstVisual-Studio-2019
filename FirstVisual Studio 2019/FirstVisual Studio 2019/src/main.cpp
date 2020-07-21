@@ -10,7 +10,6 @@ int main()
 {
 	//コマンド入力値
 	string command="";
-	bool count = true;
 	
 	{
 		auto component = ComponentManager::GenerateComponent();
@@ -21,27 +20,23 @@ int main()
 		GameObjectManager::GenerateGameObject("ObjectB").lock()->AddComponent(component);
 	}
 
-	std::cout << "プログラム開始" << endl;
+	cout << "プログラム開始" << endl;
 
 	//コマンド判別
 	while (command!="end")
 	{
-		std::cout << "フレーム更新" << endl;
+		cout << "フレーム更新" << endl;
 
-		if (command == "a" || count == true)
-		{
-			ComponentManager::update();
+	
+		ComponentManager::update();
 
-			std::cout << endl;
+		cout << endl;
 
-			ComponentManager::draw();
+		ComponentManager::draw();
 
-			std::cout << endl;
+		cout << endl;
 
-			//updateとdrawの表示
-			
-			count = false;
-		}
+		//updateとdrawの表示
 
 		cin >> command;
 	
@@ -49,7 +44,7 @@ int main()
 	    if (command == "add")
 		{
 		    string name;
-			std::cout << "オブジェクト名入力 ->";
+			cout << "オブジェクト名入力 ->";
 			cin >> name;
 
 			{
