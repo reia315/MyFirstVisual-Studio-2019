@@ -20,7 +20,7 @@ void ComponentManager::draw()
 	}
 }
 
-std::weak_ptr<Component> ComponentManager::GeneratComponent()
+std::weak_ptr<Component> ComponentManager::GenerateComponent()
 {
 	auto component = std::make_shared<Component>();
 	m_component.push_back(component);
