@@ -1,6 +1,5 @@
 #include"GameObject.h"
 #include "../Component/Component.h"
-#include "../ComponentManager/ComponentManager.h"
 
 GameObject::GameObject(const std::string& name):m_name{name}{}
 
