@@ -8,7 +8,6 @@ class GameObject;
 class GameObjectManager
 {
 public:
-	GameObjectManager();
 
 	static std::weak_ptr<GameObject> GenerateGameObject(const std::string& name);
 
