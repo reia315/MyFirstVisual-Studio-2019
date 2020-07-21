@@ -18,7 +18,7 @@ void Component::Draw()
 	cout <<m_gameObject.lock()->GetName()<< "Draw" << endl;
 }
 
-void Component::SetGameObject(std::weak_ptr<GameObject> gameObject)
+void Component::SetGameObject(const std::weak_ptr<GameObject>& gameObject)
 {
 	m_gameObject = gameObject;
 }
