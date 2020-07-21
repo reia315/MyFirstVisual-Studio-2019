@@ -15,7 +15,7 @@ public:
 	//const参照型の戻り値（仕様用途はconstリファレンスと同じ）
 	const std::string& GetName()const;
 
-	void AddComponent();
+	void AddComponent(const std::weak_ptr<Component>& component);
 
 private:
 
