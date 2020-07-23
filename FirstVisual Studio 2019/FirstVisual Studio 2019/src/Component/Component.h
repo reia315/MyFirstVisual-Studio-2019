@@ -11,12 +11,13 @@ public:
 	Component();
 
 	//XVˆ—
-	void Update();
+	virtual void Update() {};
 	//•`‰æˆ—
-	void Draw();
+	virtual void Draw() {};
 
-	void SetGameObject(const std::weak_ptr<GameObject>& gameObject);
-private:
+	void SetGameObject(const std::weak_ptr<GameObject>& gameObject) ;
+
+//private:
 
 	std::weak_ptr<GameObject>m_gameObject;
 	
