@@ -14,7 +14,7 @@ public:
 	static void draw();
 	//コンポーネントクラスの生成
 	template<class T,class... Args >
-    static std::weak_ptr<Component> GenerateComponent(Args... args);
+    static std::weak_ptr<Component> GenerateComponent(const Args&... args);
 
 
 private:
@@ -23,7 +23,7 @@ private:
 };
 
 template<class T,class ...Args>
-inline std::weak_ptr<Component> ComponentManager::GenerateComponent(Args ...args)
+inline std::weak_ptr<Component> ComponentManager::GenerateComponent(const Args& ...args)
 {
 	auto component = std::make_shared<T>(args...);
 	m_component.push_back(component);
