@@ -6,11 +6,11 @@ using namespace std;
 
 void TestOutPut::Update()
 {
-	cout << m_gameObject.lock()->GetName() << "Update" << endl;
+	cout << GetGameObject().lock()->GetName() << "Update" << endl;
 }
 
 void TestOutPut::Draw()
 {
-	cout << m_gameObject.lock()->GetName() << "Draw" << endl;
+	cout << GetGameObject().lock()->GetName() << "Draw" << endl;
 }
 
