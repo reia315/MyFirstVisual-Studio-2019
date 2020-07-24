@@ -9,7 +9,8 @@ class GameObject:public std::enable_shared_from_this<GameObject>
 {
 public:
 	//constリファレンスを使用
-	GameObject(const std::string& name);
+	//引数が１つのコンストラクタにはexplicitをつける
+	explicit GameObject(const std::string& name);
 	
 
 	//const参照型の戻り値（仕様用途はconstリファレンスと同じ）
