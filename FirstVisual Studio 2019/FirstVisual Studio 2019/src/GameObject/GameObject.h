@@ -16,6 +16,9 @@ public:
 	//const参照型の戻り値（仕様用途はconstリファレンスと同じ）
 	const std::string& GetName()const;
 
+	template<class T,class... Args>
+	void CreateComponent(Args...args);
+
 	void AddComponent(const std::weak_ptr<Component>& component);
 
 private:
@@ -26,3 +29,11 @@ private:
 
 
 };
+
+template<class T, class ...Args>
+inline void GameObject::CreateComponent(Args...args)
+{
+	auto component = ComponentManager::GenerateComponent<T>(args...);
+	component.lock()->SetGameObject(weak_from_this());
+	m_components.push_back(component);
+}
