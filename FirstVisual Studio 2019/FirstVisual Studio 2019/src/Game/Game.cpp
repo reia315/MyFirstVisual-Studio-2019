@@ -3,6 +3,7 @@
 #include "../GameObject/GameObject.h"
 #include "../ComponentManager/ComponentManager.h"
 #include "../GameObjectManager/GameObjectManager.h"
+#include "../TestOutPut/TestOutPut.h"
 #include <memory>
 
 using namespace std;
@@ -12,14 +13,18 @@ void Game::Run()
 	//コマンド入力値
 	string command = "";
 
-	{
-		auto component = ComponentManager::GenerateComponent();
-		GameObjectManager::GenerateGameObject("ObjectA").lock()->AddComponent(component);
-	}
-	{
-		auto component = ComponentManager::GenerateComponent();
-		GameObjectManager::GenerateGameObject("ObjectB").lock()->AddComponent(component);
-	}
+	auto gameObject = GameObjectManager::GenerateGameObject("ObjectA");
+	gameObject.lock()->CreateComponent<TestOutPut>();
+
+
+	//{
+	//	auto component = ComponentManager::GenerateComponent();
+	//	GameObjectManager::GenerateGameObject("ObjectA").lock()->AddComponent(component);
+	//}
+	//{
+	//	auto component = ComponentManager::GenerateComponent();
+	//	GameObjectManager::GenerateGameObject("ObjectB").lock()->AddComponent(component);
+	//}
 
 	cout << "プログラム開始" << endl;
 
@@ -42,7 +47,7 @@ void Game::Run()
 		cin >> command;
 
 
-		if (command == "add")
+		/*if (command == "add")
 		{
 			string name;
 			cout << "オブジェクト名入力 ->";
@@ -60,7 +65,7 @@ void Game::Run()
 			ComponentManager::draw();
 
 			std::cout << endl;
-		}
+		}*/
 
 		std::cout << endl;
 
