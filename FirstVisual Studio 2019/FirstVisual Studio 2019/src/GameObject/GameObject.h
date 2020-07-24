@@ -17,8 +17,9 @@ public:
 	//const参照型の戻り値（仕様用途はconstリファレンスと同じ）
 	const std::string& GetName()const;
 
+	//可変長引数のところにもcomst参照をつけることができる
 	template<class T,class... Args>
-	void CreateComponent(Args...args);
+	void CreateComponent(const Args&...args);
 
 	void AddComponent(const std::weak_ptr<Component>& component);
 
@@ -32,7 +33,7 @@ private:
 };
 
 template<class T, class ...Args>
-inline void GameObject::CreateComponent(Args...args)
+inline void GameObject::CreateComponent(const Args&...args)
 {
 	auto component = ComponentManager::GenerateComponent<T>(args...);
 	component.lock()->SetGameObject(weak_from_this());
