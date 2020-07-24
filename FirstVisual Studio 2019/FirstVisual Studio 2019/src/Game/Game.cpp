@@ -47,25 +47,20 @@ void Game::Run()
 		cin >> command;
 
 
-		/*if (command == "add")
+		if (command == "add")
 		{
 			string name;
 			cout << "オブジェクト名入力 ->";
 			cin >> name;
 
-			{
-				auto component = ComponentManager::GenerateComponent();
-				GameObjectManager::GenerateGameObject(name).lock()->AddComponent(component);
-			}
+			auto gameObject = GameObjectManager::GenerateGameObject(name);
+			gameObject.lock()->CreateComponent<TestOutPut>();
+			//{
+			//	auto component = ComponentManager::GenerateComponent();
+			//	GameObjectManager::GenerateGameObject(name).lock()->AddComponent(component);
+			//}
 
-			ComponentManager::update();
-
-			std::cout << endl;
-
-			ComponentManager::draw();
-
-			std::cout << endl;
-		}*/
+		}
 
 		std::cout << endl;
 
