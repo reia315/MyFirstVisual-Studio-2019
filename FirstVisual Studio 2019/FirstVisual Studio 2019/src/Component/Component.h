@@ -15,6 +15,9 @@ public:
 	//•`‰æˆ—
 	virtual void Draw() {};
 
+	//Object‚ğ‚Æ‚Á‚Ä‚­‚é
+	const std::weak_ptr<GameObject>& GetGameObject() const; 
+
 	void SetGameObject(const std::weak_ptr<GameObject>& gameObject) ;
 
 //private:
