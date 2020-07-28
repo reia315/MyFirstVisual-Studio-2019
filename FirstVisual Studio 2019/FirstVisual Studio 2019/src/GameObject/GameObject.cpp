@@ -17,6 +17,12 @@ void GameObject::AddComponent(const std::weak_ptr<Component>& component)
 
 void GameObject::Destroy()
 {
+	//自分が持っているコンポーネントの死亡フラグを立てる
+	for (const auto& component : m_components)
+	{
+		component.lock()->Destroy();
+	}
+
 	//自分の死亡フラグをONに
 	m_isDead = true;
 }
