@@ -27,7 +27,7 @@ void GameObject::Destroy()
 	m_isDead = true;
 }
 
-bool GameObject::IsDead()
+bool GameObject::IsDead() const
 {
 	return m_isDead;
 }
