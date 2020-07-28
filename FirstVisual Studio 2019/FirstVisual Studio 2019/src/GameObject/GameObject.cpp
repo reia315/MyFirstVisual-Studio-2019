@@ -15,4 +15,15 @@ void GameObject::AddComponent(const std::weak_ptr<Component>& component)
 	m_components.push_back(component);
 }
 
+void GameObject::Destroy()
+{
+	//Ž©•ª‚ÌŽ€–Sƒtƒ‰ƒO‚ðON‚É
+	m_isDead = true;
+}
+
+bool GameObject::IsDead()
+{
+	return m_isDead;
+}
+
 
