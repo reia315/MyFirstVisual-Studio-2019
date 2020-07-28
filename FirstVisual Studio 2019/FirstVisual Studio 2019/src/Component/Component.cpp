@@ -1,6 +1,5 @@
 #include "Component.h"
 #include "../GameObject/GameObject.h"
-#include <iostream>
 
 
 Component::Component()
