@@ -9,10 +9,10 @@ class ComponentManager
 public:
 
 	//XV
-	static void update();
+	static void Update();
 
 	//•`‰æ
-	static void draw();
+	static void Draw();
 
 	static void DeleteComponent();
 
