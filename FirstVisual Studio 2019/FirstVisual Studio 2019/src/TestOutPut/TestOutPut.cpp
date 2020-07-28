@@ -6,6 +6,7 @@ using namespace std;
 
 void TestOutPut::Update()
 {
+	auto gameObject = GetGameObject();
 	cout << GetGameObject().lock()->GetName() << "Update" << endl;
 }
 
