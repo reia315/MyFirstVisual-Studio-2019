@@ -5,7 +5,6 @@
 #include "../GameObjectManager/GameObjectManager.h"
 #include "../TestOutPut/TestOutPut.h"
 #include "../DestoryObject/DestoryObject.h"
-#include <memory>
 
 using namespace std;
 
@@ -36,11 +35,11 @@ void Game::Run()
 
 		cout << "フレーム更新" << endl;
 
-		ComponentManager::update();
+		ComponentManager::Update();
 
 		cout << endl;
 
-		ComponentManager::draw();
+		ComponentManager::Draw();
 
 		cout << endl;
 
