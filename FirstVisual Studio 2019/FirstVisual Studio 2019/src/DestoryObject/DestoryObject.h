@@ -13,7 +13,7 @@ public :
 	explicit DestoryObject(const std::string& name);
 
 	virtual void Update()override;
-
+	virtual void Draw()override;
 private:
 	 
 	std::string m_name;
