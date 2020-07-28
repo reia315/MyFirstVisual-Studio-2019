@@ -25,7 +25,7 @@ public:
 	void Destroy();
 
 	//€‚ñ‚Å‚¢‚é‚©‚Ìó‘Ô‚ğ•Ô‚·
-	bool IsDead();
+	bool IsDead() const;
 
 private:
 
