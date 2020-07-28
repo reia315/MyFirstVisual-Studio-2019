@@ -2,7 +2,6 @@
 #include "../GameObject/GameObject.h"
 #include <iostream>
 
-using namespace std;
 
 Component::Component()
 {
