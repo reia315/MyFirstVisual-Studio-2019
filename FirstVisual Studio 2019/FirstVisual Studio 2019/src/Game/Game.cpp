@@ -33,6 +33,7 @@ void Game::Run()
 	//コマンド判別
 	while (command != "end")
 	{
+
 		cout << "フレーム更新" << endl;
 
 		ComponentManager::update();
@@ -46,7 +47,6 @@ void Game::Run()
 		//updateとdrawの表示
 
 		cin >> command;
-		GameObjectManager::DeleteGameObject("ObjectB");
 
 		if (command == "add")
 		{
@@ -60,12 +60,19 @@ void Game::Run()
 			//	auto component = ComponentManager::GenerateComponent();
 			//	GameObjectManager::GenerateGameObject(name).lock()->AddComponent(component);
 			//}
-
+	
 		}
+
+		ComponentManager::DeleteComponent();
+		GameObjectManager::DeleteGameObject("ObjectB");
 		
 		std::cout << endl;
 
+		
+
 	}
+
+
 
 	//終了時に入力
 	std::cout << "プログラム終了" << endl;
