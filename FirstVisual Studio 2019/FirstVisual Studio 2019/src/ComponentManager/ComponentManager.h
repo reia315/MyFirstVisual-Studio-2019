@@ -10,8 +10,12 @@ public:
 
 	//更新
 	static void update();
+
 	//描画
 	static void draw();
+
+	static void DeleteComponent();
+
 	//コンポーネントクラスの生成
 	template<class T,class... Args >
     static std::weak_ptr<Component> GenerateComponent(const Args&... args);
