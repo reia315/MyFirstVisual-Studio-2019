@@ -14,3 +14,7 @@ void DestoryObject::Update()
 		gameObject.lock()->Destroy();
 	}
 }
+
+void DestoryObject::Draw()
+{
+}
