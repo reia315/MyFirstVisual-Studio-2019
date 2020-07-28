@@ -10,7 +10,7 @@ class DestoryObject:public Component
 {
 public :
    
-	DestoryObject(const std::string& name);
+	explicit DestoryObject(const std::string& name);
 
 	virtual void Update()override;
 
