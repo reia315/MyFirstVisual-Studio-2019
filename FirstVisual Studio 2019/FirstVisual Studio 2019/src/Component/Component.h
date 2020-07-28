@@ -15,13 +15,23 @@ public:
 	//描画処理
 	virtual void Draw() {};
 
-	//Objectをとってくる
+	//このコンポーネントのユーザーを取得する
 	const std::weak_ptr<GameObject>& GetGameObject() const; 
 
+	//このコンポーネントのユーザーを設定する
 	void SetGameObject(const std::weak_ptr<GameObject>& gameObject) ;
 
-//private:
+	//死亡フラグを立てる
+	void Destroy();
 
-	std::weak_ptr<GameObject>m_gameObject;
+	//死んでいるかの状態を返す
+	bool IsDead();
+
+private:
+
+	std::weak_ptr<GameObject>m_user;
+
+	//死亡フラグ
+	bool m_isDead{ false };
 	
 };
