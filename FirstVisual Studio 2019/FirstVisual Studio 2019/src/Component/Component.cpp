@@ -23,7 +23,7 @@ void Component::Destroy()
 	m_isDead = true;
 }
 
-bool Component::IsDead()
+bool Component::IsDead() const
 {
 	return m_isDead;
 }
