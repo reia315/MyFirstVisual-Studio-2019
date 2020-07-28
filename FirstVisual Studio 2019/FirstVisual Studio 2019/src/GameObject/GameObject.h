@@ -23,11 +23,18 @@ public:
 
 	void AddComponent(const std::weak_ptr<Component>& component);
 
-private:
+	void Destroy();
 
+	bool IsDead();
+
+private:
+	
 	std::string m_name;
 
 	std::vector<std::weak_ptr<Component>> m_components;
+
+	//Ž€–Sƒtƒ‰ƒO
+	bool m_isDead{ false };
 
 
 };
