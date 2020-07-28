@@ -4,6 +4,7 @@
 #include "../ComponentManager/ComponentManager.h"
 #include "../GameObjectManager/GameObjectManager.h"
 #include "../TestOutPut/TestOutPut.h"
+#include "../DestoryObject/DestoryObject.h"
 #include <memory>
 
 using namespace std;
@@ -15,8 +16,9 @@ void Game::Run()
 
 	auto gameObject = GameObjectManager::GenerateGameObject("ObjectA");
 	gameObject.lock()->CreateComponent<TestOutPut>();
+	gameObject.lock()->CreateComponent<DestoryObject>("ObjectB");
 
-
+	
 	//{
 	//	auto component = ComponentManager::GenerateComponent();
 	//	GameObjectManager::GenerateGameObject("ObjectA").lock()->AddComponent(component);
@@ -33,7 +35,6 @@ void Game::Run()
 	{
 		cout << "フレーム更新" << endl;
 
-
 		ComponentManager::update();
 
 		cout << endl;
@@ -45,7 +46,7 @@ void Game::Run()
 		//updateとdrawの表示
 
 		cin >> command;
-
+		GameObjectManager::DeleteGameObject("ObjectB");
 
 		if (command == "add")
 		{
@@ -61,7 +62,7 @@ void Game::Run()
 			//}
 
 		}
-
+		
 		std::cout << endl;
 
 	}
