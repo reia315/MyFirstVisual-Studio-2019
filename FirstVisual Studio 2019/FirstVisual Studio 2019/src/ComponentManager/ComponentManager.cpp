@@ -4,6 +4,8 @@
 //静的変数のときは.cppで再定義する必要がある
 std::list<std::shared_ptr<Component>>ComponentManager::m_component;
 
+std::list<std::shared_ptr<Component>>ComponentManager::m_addComponent;
+
 void ComponentManager::Update()
 {
 	for (const auto& component : m_component)
@@ -17,6 +19,14 @@ void ComponentManager::Draw()
 	for (const auto& component : m_component)
 	{
 		component->Draw();
+	}
+}
+
+void ComponentManager::UpdateComponentList()
+{
+	for (const auto& component : m_addComponent)
+	{
+		m_component.push_back(component);
 	}
 }
 
