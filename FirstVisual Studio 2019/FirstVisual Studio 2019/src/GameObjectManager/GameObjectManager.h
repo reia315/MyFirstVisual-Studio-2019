@@ -13,7 +13,7 @@ public:
 	//
 	static void UpdateGamObjectList();
 	//
-	static void DeleteGameObject(const std::string& name);
+	static void DeleteGameObject();
 	//
 	static std::weak_ptr<GameObject> GenerateGameObject(const std::string& name);
 
