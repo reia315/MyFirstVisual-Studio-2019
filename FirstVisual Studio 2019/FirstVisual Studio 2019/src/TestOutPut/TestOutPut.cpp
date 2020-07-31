@@ -14,3 +14,8 @@ void TestOutPut::Draw()
 	cout << GetGameObject().lock()->GetName() << "Draw" << endl;
 }
 
+std::weak_ptr<Component> TestOutPut::CloneComponent() const
+{
+	return ComponentManager::GenerateComponent<TestOutPut>();
+}
+
