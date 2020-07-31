@@ -48,11 +48,12 @@ void GameObjectManager::DeleteGameObject(const std::string& name)
 	m_gameObject.remove_if([](const auto& gameObject) {return gameObject->IsDead(); });//ラムダ式を使用
 }
 
+
 std::weak_ptr<GameObject> GameObjectManager::CloneGameObject(const std::weak_ptr<GameObject>& gameObject)
 {
-	auto clone = std::shared_ptr<GameObject>(gameObject);
-
+	//make_shared<クラス>(コンストラクタの引数)
+	//この行は実体を作成
+	auto clone = std::make_shared<GameObject>(gameObject);
 	m_addGaneObject.push_front(clone);
-
 	return clone;
 }
