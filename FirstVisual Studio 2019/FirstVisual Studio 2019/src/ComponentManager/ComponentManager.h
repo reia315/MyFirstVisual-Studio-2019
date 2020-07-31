@@ -34,6 +34,6 @@ template<class T,class ...Args>
 inline std::weak_ptr<Component> ComponentManager::GenerateComponent(const Args& ...args)
 {
 	auto component = std::make_shared<T>(args...);
-	m_component.push_back(component);
+	m_addComponent.push_back(component);
 	return component;
 }
