@@ -14,6 +14,7 @@ public:
 	//引数が１つのコンストラクタにはexplicitをつける
 	explicit GameObject(const std::string& name);
 	
+	GameObject(const std::weak_ptr<const GameObject>& other);
 
 	//const参照型の戻り値（仕様用途はconstリファレンスと同じ）
 	const std::string& GetName()const;
