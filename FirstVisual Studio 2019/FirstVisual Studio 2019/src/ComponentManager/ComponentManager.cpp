@@ -20,6 +20,8 @@ void ComponentManager::Draw()
 	}
 }
 
+
+
 void ComponentManager::DeleteComponent()
 {
 	m_component.remove_if([](const auto& component) {return component->IsDead(); });
