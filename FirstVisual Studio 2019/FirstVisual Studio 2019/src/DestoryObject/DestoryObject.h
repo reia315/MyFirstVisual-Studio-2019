@@ -13,7 +13,8 @@ public :
 	explicit DestoryObject(const std::string& name);
 
 	virtual void Update()override;
-	virtual void Draw()override;
+
+	virtual std::weak_ptr<Component> CloneComponent() const override;
 private:
 	 
 	std::string m_name;

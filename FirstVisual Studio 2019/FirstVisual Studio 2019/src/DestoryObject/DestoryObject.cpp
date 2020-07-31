@@ -15,6 +15,7 @@ void DestoryObject::Update()
 	}
 }
 
-void DestoryObject::Draw()
+std::weak_ptr<Component> DestoryObject::CloneComponent() const
 {
+	return ComponentManager::GenerateComponent<DestoryObject>(m_name);
 }
