@@ -17,7 +17,7 @@ void Game::Run()
 	auto gameObject = GameObjectManager::GenerateGameObject("ObjectA");
 	gameObject.lock()->CreateComponent<TestOutPut>();
 	gameObject.lock()->CreateComponent<DestoryObject>("ObjectB");
-	gameObject.lock()->CreateComponent<CloneObject>(2);
+	gameObject.lock()->CreateComponent<CloneObject>(3);
 
 	
 	//{
@@ -44,7 +44,9 @@ void Game::Run()
 		ComponentManager::Draw();
 
 		cout << endl;
-
+		
+		ComponentManager::UpdateComponentList();
+		
 		//update‚Ædraw‚Ì•\Ž¦
 
 		cin >> command;
@@ -65,7 +67,7 @@ void Game::Run()
 		}
 
 		ComponentManager::DeleteComponent();
-		GameObjectManager::DeleteGameObject("ObjectB");
+		GameObjectManager::DeleteGameObject();
 		
 		std::cout << endl;
 
