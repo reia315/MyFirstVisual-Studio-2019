@@ -5,7 +5,9 @@
 
 CloneObject::CloneObject(int Num) :m_cloneNum{Num}{}
 
-CloneObject::CloneObject(const std::weak_ptr<const CloneObject>& other): m_cloneNum{other.lock()->m_cloneNum},m_eraseNum{other.lock()->m_eraseNum}{}
+CloneObject::CloneObject(const std::weak_ptr<const CloneObject>& other):
+	m_cloneNum{other.lock()->m_cloneNum},
+	m_eraseNum{other.lock()->m_eraseNum}{}
 
 void CloneObject::Update()
 {
