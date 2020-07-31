@@ -5,6 +5,7 @@
 #include "../GameObjectManager/GameObjectManager.h"
 #include "../TestOutPut/TestOutPut.h"
 #include "../DestoryObject/DestoryObject.h"
+#include "../CloneObject/CloneObject.h"
 
 using namespace std;
 
@@ -16,6 +17,7 @@ void Game::Run()
 	auto gameObject = GameObjectManager::GenerateGameObject("ObjectA");
 	gameObject.lock()->CreateComponent<TestOutPut>();
 	gameObject.lock()->CreateComponent<DestoryObject>("ObjectB");
+	gameObject.lock()->CreateComponent<CloneObject>(2);
 
 	
 	//{
