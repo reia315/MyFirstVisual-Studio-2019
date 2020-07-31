@@ -40,7 +40,6 @@ private:
 	//Ž€–Sƒtƒ‰ƒO
 	bool m_isDead{ false };
 
-
 };
 
 template<class T, class ...Args>
