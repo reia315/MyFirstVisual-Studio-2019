@@ -28,6 +28,8 @@ void ComponentManager::UpdateComponentList()
 	{
 		m_component.push_back(component);
 	}
+
+	m_addComponent.clear();
 }
 
 
