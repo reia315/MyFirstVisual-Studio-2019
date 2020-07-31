@@ -28,7 +28,7 @@ public:
 
 	bool IsDead() const;
 
-	//const std::forward_list<std::weak_ptr<Component>>& GetComponentAll() const;
+	const std::forward_list<std::weak_ptr<Component>>& GetComponentAll() const;
 
 private:
 	
