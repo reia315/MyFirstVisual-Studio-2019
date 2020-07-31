@@ -12,7 +12,7 @@ void GameObject::AddComponent(const std::weak_ptr<Component>& component)
 {
 	//auto component = ComponentManager::GeneratComponent();
 	component.lock()->SetGameObject(weak_from_this());
-	m_components.push_back(component);
+	m_components.push_front(component);
 }
 
 void GameObject::Destroy()
@@ -30,6 +30,11 @@ void GameObject::Destroy()
 bool GameObject::IsDead() const
 {
 	return m_isDead;
+}
+
+const std::forward_list<std::weak_ptr<Component>>& GameObject::GetComponentAll() const
+{
+	return m_components;
 }
 
 

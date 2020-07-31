@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <forward_list>
 #include <memory>
 #include "../ComponentManager/ComponentManager.h"
 
@@ -27,11 +28,13 @@ public:
 
 	bool IsDead() const;
 
+	//const std::forward_list<std::weak_ptr<Component>>& GetComponentAll() const;
+
 private:
 	
 	std::string m_name;
 
-	std::vector<std::weak_ptr<Component>> m_components;
+	std::forward_list<std::weak_ptr<Component>> m_components;
 
 	//Ž€–Sƒtƒ‰ƒO
 	bool m_isDead{ false };
@@ -44,5 +47,5 @@ inline void GameObject::CreateComponent(const Args&...args)
 {
 	auto component = ComponentManager::GenerateComponent<T>(args...);
 	component.lock()->SetGameObject(weak_from_this());
-	m_components.push_back(component);
+	m_components.push_front(component);
 }
