@@ -3,6 +3,9 @@
 
 GameObject::GameObject(const std::string& name):m_name{name}{}
 
+//m_components‚Í•K—v‚È‚¢‹C‚ª‚·‚é
+GameObject::GameObject(const std::weak_ptr<const GameObject>& other) : m_name{ other.lock()->m_name } , m_components {other.lock()->m_components} {}
+
 const std::string& GameObject::GetName()const
 {
 	return m_name;
