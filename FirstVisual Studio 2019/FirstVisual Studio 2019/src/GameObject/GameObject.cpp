@@ -3,8 +3,8 @@
 
 GameObject::GameObject(const std::string& name):m_name{name}{}
 
-//m_componentsは必要ない気がする
-GameObject::GameObject(const std::weak_ptr<const GameObject>& other) : m_name{ other.lock()->m_name } , m_components {other.lock()->m_components} {}
+//m_componentsは必要ない気がする＜－コピーするときは空でないと無限ループしてしまう
+GameObject::GameObject(const std::weak_ptr<const GameObject>& other) : m_name{ other.lock()->m_name } /*, m_components {other.lock()->m_components}*/ {}
 
 const std::string& GameObject::GetName()const
 {
