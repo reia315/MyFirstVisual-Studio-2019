@@ -4,7 +4,7 @@
 //前方宣言
 class GameObject;
 
-class Component
+class Component:public std::enable_shared_from_this<Component>
 {
 public:
 	//コンストラクタ
@@ -14,6 +14,8 @@ public:
 	virtual void Update() {};
 	//描画処理
 	virtual void Draw() {};
+
+	virtual std::weak_ptr<Component>CloneComponent() const = 0;
 
 	//このコンポーネントのユーザーを取得する
 	const std::weak_ptr<GameObject>& GetGameObject() const; 
