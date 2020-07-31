@@ -38,7 +38,7 @@ std::weak_ptr<GameObject> GameObjectManager::GenerateGameObject(const std::strin
 	return gameObject;
 }
 
-void GameObjectManager::DeleteGameObject(const std::string& name)
+void GameObjectManager::DeleteGameObject()
 {	
 	//const auto& gameObject = std::remove(m_gameObject.begin(), m_gameObject.end(), name);
 
