@@ -14,6 +14,8 @@ public:
 	//描画
 	static void Draw();
 
+	static void UpdateComponentList();
+
 	static void DeleteComponent();
 
 	//コンポーネントクラスの生成
@@ -24,6 +26,8 @@ public:
 private:
 
 	static std::list<std::shared_ptr<Component>>m_component;
+
+	static std::list<std::shared_ptr<Component>> m_addComponent;
 };
 
 template<class T,class ...Args>
