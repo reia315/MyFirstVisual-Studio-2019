@@ -3,7 +3,7 @@
 #include "../GameObjectManager/GameObjectManager.h"
 #include "../ComponentManager/ComponentManager.h"
 
-CloneObject::CloneObject(int Num) :m_cloneNum{Num}{}
+CloneObject::CloneObject(int num) :m_cloneNum{num}{}
 
 CloneObject::CloneObject(const std::weak_ptr<const CloneObject>& other):
 	m_cloneNum{other.lock()->m_cloneNum},
@@ -15,11 +15,11 @@ void CloneObject::Update()
 
 	m_eraseNum++;
 
-	auto clone = GameObjectManager::CloneGameObject(GetGameObject());
+	auto cloneEntity = GameObjectManager::CloneGameObject(GetGameObject());
 
 	for (const auto& component : GetGameObject().lock()->GetComponentAll())
 	{
-		clone.lock()->AddComponent(component.lock()->CloneComponent());
+		cloneEntity.lock()->AddComponent(component.lock()->CloneComponent());
 	}
 }
 
