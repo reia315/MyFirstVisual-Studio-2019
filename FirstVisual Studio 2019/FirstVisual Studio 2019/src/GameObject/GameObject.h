@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include <vector>
 #include <forward_list>
 #include <memory>
 #include "../ComponentManager/ComponentManager.h"
