@@ -38,10 +38,3 @@ void ComponentManager::DeleteComponent()
 {
 	m_component.remove_if([](const auto& component) {return component->IsDead(); });
 }
-
-//std::weak_ptr<Component> ComponentManager::GenerateComponent()
-//{
-//	auto component = std::make_shared<Component>();
-//	m_component.push_back(component);
-//	return component;
-//}
