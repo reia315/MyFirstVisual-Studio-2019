@@ -13,7 +13,6 @@ const std::string& GameObject::GetName()const
 
 void GameObject::AddComponent(const std::weak_ptr<Component>& component)
 {
-	//auto component = ComponentManager::GeneratComponent();
 	component.lock()->SetGameObject(weak_from_this());
 	m_components.push_front(component);
 }
