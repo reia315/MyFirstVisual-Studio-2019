@@ -4,9 +4,9 @@
 class CloneObject:public Component
 {
 public:
-    CloneObject(int Num);
+    explicit CloneObject(int num);
 
-    CloneObject(const std::weak_ptr<const CloneObject>& other);
+    explicit CloneObject(const std::weak_ptr<const CloneObject>& other);
 
     virtual void Update()override;
 
