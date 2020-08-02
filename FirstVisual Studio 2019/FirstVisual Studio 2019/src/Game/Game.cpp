@@ -46,6 +46,7 @@ void Game::Run()
 		cout << endl;
 		
 		ComponentManager::UpdateComponentList();
+		GameObjectManager::UpdateGamObjectList();
 		
 		//update‚Ædraw‚Ì•\Ž¦
 
