@@ -1,6 +1,7 @@
 #pragma once
 #include <list>//前方配列
 #include <memory>//スマートポインタ
+#include <string>
 
 class Component;
 
@@ -13,6 +14,8 @@ public:
 
 	//描画
 	static void Draw();
+
+	static void sendInputStr(const std::string& inputStr);
 
 	static void UpdateComponentList();
 
