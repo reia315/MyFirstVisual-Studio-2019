@@ -50,8 +50,7 @@ void Game::Run()
 
 			auto gameObject = GameObjectManager::GenerateGameObject(name);
 			gameObject.lock()->CreateComponent<TestOutPut>();
-			//ComponentManager::sendInputStr(name);
-			
+			ComponentManager::sendInputStr(name);
 		}
 
 		ComponentManager::DeleteComponent();
