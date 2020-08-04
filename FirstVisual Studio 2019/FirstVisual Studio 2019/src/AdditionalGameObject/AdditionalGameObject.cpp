@@ -3,7 +3,6 @@
 #include "../GameObjectManager/GameObjectManager.h"
 #include "../TestOutPut/TestOutPut.h"
 #include "../GameObject/GameObject.h"
-#include <iostream>
 
 
 AdditionalGameObject::AdditionalGameObject(const std::weak_ptr<const AdditionalGameObject>& other){}
