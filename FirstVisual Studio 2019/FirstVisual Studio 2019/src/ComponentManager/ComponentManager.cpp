@@ -22,6 +22,14 @@ void ComponentManager::Draw()
 	}
 }
 
+void ComponentManager::sendInputStr(const std::string& inputStr)
+{
+	for (const auto& component : m_component)
+	{
+		component->Input(inputStr);
+	}
+}
+
 void ComponentManager::UpdateComponentList()
 {
 	for (const auto& component : m_addComponent)
