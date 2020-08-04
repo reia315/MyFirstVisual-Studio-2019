@@ -48,8 +48,8 @@ void Game::Run()
 			cout << "オブジェクト名入力 ->";
 			cin >> name;
 
-			auto gameObject = GameObjectManager::GenerateGameObject(name);
-			gameObject.lock()->CreateComponent<TestOutPut>();
+			/*auto gameObject = GameObjectManager::GenerateGameObject(name);
+			gameObject.lock()->CreateComponent<TestOutPut>();*/
 			ComponentManager::sendInputStr(name);
 		}
 
