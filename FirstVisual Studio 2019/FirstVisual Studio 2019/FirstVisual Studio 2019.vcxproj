@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\AdditionalGameObject\AdditionalGameObject.cpp" />
     <ClCompile Include="src\CloneObject\CloneObject.cpp" />
     <ClCompile Include="src\Component\Component.cpp" />
     <ClCompile Include="src\ComponentManager\ComponentManager.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="src\TestOutPut\TestOutPut.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\AdditionalGameObject\AdditionalGameObject.h" />
     <ClInclude Include="src\CloneObject\CloneObject.h" />
     <ClInclude Include="src\Component\Component.h" />
     <ClInclude Include="src\ComponentManager\ComponentManager.h" />
