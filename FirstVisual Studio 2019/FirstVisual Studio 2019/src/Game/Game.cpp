@@ -6,6 +6,7 @@
 #include "../TestOutPut/TestOutPut.h"
 #include "../DestoryObject/DestoryObject.h"
 #include "../CloneObject/CloneObject.h"
+#include "../AdditionalGameObject/AdditionalGameObject.h"
 
 using namespace std;
 
@@ -18,17 +19,6 @@ void Game::Run()
 	gameObject.lock()->CreateComponent<TestOutPut>();
 	gameObject.lock()->CreateComponent<DestoryObject>("ObjectB");
 	gameObject.lock()->CreateComponent<CloneObject>(3);
-
-	
-	//{
-	//	auto component = ComponentManager::GenerateComponent();
-	//	GameObjectManager::GenerateGameObject("ObjectA").lock()->AddComponent(component);
-	//}
-	//{
-	//	auto component = ComponentManager::GenerateComponent();
-	//	GameObjectManager::GenerateGameObject("ObjectB").lock()->AddComponent(component);
-	//}
-
 	cout << "プログラム開始" << endl;
 
 	//コマンド判別
@@ -60,11 +50,8 @@ void Game::Run()
 
 			auto gameObject = GameObjectManager::GenerateGameObject(name);
 			gameObject.lock()->CreateComponent<TestOutPut>();
-			//{
-			//	auto component = ComponentManager::GenerateComponent();
-			//	GameObjectManager::GenerateGameObject(name).lock()->AddComponent(component);
-			//}
-	
+			//ComponentManager::sendInputStr(name);
+			
 		}
 
 		ComponentManager::DeleteComponent();
@@ -72,12 +59,7 @@ void Game::Run()
 		
 		std::cout << endl;
 
-		
-
 	}
-
-
-
 	//終了時に入力
 	std::cout << "プログラム終了" << endl;
 }
