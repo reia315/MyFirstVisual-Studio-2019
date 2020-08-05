@@ -6,7 +6,7 @@ class AdditionalGameObject :public Component
 {
 public:
 
-	AdditionalGameObject(char named, const std::string& findCommand);
+	AdditionalGameObject(const std::string& inputStr, char separated );
 
 	explicit AdditionalGameObject(const std::weak_ptr<const AdditionalGameObject>& other);
 
@@ -16,7 +16,7 @@ public:
 
 private:
 
-	char m_gameObjectName;
+	char m_separated;
 
-	std::string m_findCommand;
+	std::string m_createName;
 };
