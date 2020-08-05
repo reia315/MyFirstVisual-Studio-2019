@@ -42,16 +42,16 @@ void Game::Run()
 
 		cin >> command;
 
-		if (command == "add")
-		{
-			string name;
-			cout << "オブジェクト名入力 ->";
-			cin >> name;
-
-			/*auto gameObject = GameObjectManager::GenerateGameObject(name);
-			gameObject.lock()->CreateComponent<TestOutPut>();*/
-			ComponentManager::sendInputStr(name);
-		}
+		//if (command == "add")
+		//{
+		//	string name;
+		//	cout << "オブジェクト名入力 ->";
+		//	cin >> name;
+		//	/*auto gameObject = GameObjectManager::GenerateGameObject(name);
+		//	gameObject.lock()->CreateComponent<TestOutPut>();*/
+		//	
+		//}
+		ComponentManager::sendInputStr(command);
 
 		ComponentManager::DeleteComponent();
 		GameObjectManager::DeleteGameObject();
