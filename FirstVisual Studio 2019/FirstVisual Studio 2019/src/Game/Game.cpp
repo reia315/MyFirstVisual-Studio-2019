@@ -19,6 +19,7 @@ void Game::Run()
 	gameObject.lock()->CreateComponent<TestOutPut>();
 	gameObject.lock()->CreateComponent<DestoryObject>("ObjectB");
 	gameObject.lock()->CreateComponent<CloneObject>(3);
+	gameObject.lock()->CreateComponent<AdditionalGameObject>("add", ",");
 	cout << "プログラム開始" << endl;
 
 	//コマンド判別
@@ -41,16 +42,7 @@ void Game::Run()
 		//updateとdrawの表示
 
 		cin >> command;
-
-		//if (command == "add")
-		//{
-		//	string name;
-		//	cout << "オブジェクト名入力 ->";
-		//	cin >> name;
-		//	/*auto gameObject = GameObjectManager::GenerateGameObject(name);
-		//	gameObject.lock()->CreateComponent<TestOutPut>();*/
-		//	
-		//}
+		
 		ComponentManager::sendInputStr(command);
 
 		ComponentManager::DeleteComponent();
