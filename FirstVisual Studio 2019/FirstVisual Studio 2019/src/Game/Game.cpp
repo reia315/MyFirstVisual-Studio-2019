@@ -19,7 +19,7 @@ void Game::Run()
 	gameObject.lock()->CreateComponent<TestOutPut>();
 	gameObject.lock()->CreateComponent<DestoryObject>("ObjectB");
 	gameObject.lock()->CreateComponent<CloneObject>(3);
-	gameObject.lock()->CreateComponent<AdditionalGameObject>("add", ",");
+	gameObject.lock()->CreateComponent<AdditionalGameObject>("add", ',');
 	cout << "プログラム開始" << endl;
 
 	//コマンド判別
