@@ -149,8 +149,11 @@
     <ClCompile Include="src\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MainScene\MainScene.cpp" />
+    <ClCompile Include="src\OutPutTitleScene\OutPutTitleScene.cpp" />
     <ClCompile Include="src\SceneManager\SceneManager.cpp" />
     <ClCompile Include="src\TestOutPut\TestOutPut.cpp" />
+    <ClCompile Include="src\TitleScene\TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AdditionalGameObject\AdditionalGameObject.h" />
@@ -163,9 +166,11 @@
     <ClInclude Include="src\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="src\Game\Game.h" />
     <ClInclude Include="src\MainScene\MainScene.h" />
+    <ClInclude Include="src\OutPutTitleScene\OutPutTitleScene.h" />
     <ClInclude Include="src\SceneManager\SceneManger.h" />
     <ClInclude Include="src\Scene\Scene.h" />
     <ClInclude Include="src\TestOutPut\TestOutPut.h" />
+    <ClInclude Include="src\TitleScene\TitleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
