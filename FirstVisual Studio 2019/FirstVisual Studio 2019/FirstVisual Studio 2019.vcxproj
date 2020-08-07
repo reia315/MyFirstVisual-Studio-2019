@@ -144,6 +144,7 @@
     <ClCompile Include="src\Component\Component.cpp" />
     <ClCompile Include="src\ComponentManager\ComponentManager.cpp" />
     <ClCompile Include="src\DestoryObject\DestoryObject.cpp" />
+    <ClCompile Include="src\EndProcessing\EndProcessing.cpp" />
     <ClCompile Include="src\GameObject\GameObject.cpp" />
     <ClCompile Include="src\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="src\Component\Component.h" />
     <ClInclude Include="src\ComponentManager\ComponentManager.h" />
     <ClInclude Include="src\DestoryObject\DestoryObject.h" />
+    <ClInclude Include="src\EndProcessing\EndProcessing.h" />
     <ClInclude Include="src\GameObject\GameObject.h" />
     <ClInclude Include="src\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="src\Game\Game.h" />
