@@ -149,6 +149,7 @@
     <ClCompile Include="src\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SceneManager\SceneManager.cpp" />
     <ClCompile Include="src\TestOutPut\TestOutPut.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +162,9 @@
     <ClInclude Include="src\GameObject\GameObject.h" />
     <ClInclude Include="src\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="src\Game\Game.h" />
+    <ClInclude Include="src\MainScene\MainScene.h" />
+    <ClInclude Include="src\SceneManager\SceneManger.h" />
+    <ClInclude Include="src\Scene\Scene.h" />
     <ClInclude Include="src\TestOutPut\TestOutPut.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
