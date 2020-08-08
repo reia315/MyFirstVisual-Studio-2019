@@ -11,7 +11,7 @@
 
 using namespace std;
 
-bool Game::isEnd{ false };
+bool Game::m_isEnd{ false };
 
 void Game::Run()
 {
@@ -27,7 +27,7 @@ void Game::Run()
 	cout << "プログラム開始" << endl;
 
 	//コマンド判別
-	while (!isEnd)
+	while (!m_isEnd)
 	{
 
 		cout << "フレーム更新" << endl;
@@ -61,5 +61,5 @@ void Game::Run()
 
 void Game::End()
 {
-	isEnd = true;
+	m_isEnd = true;
 }
