@@ -7,14 +7,14 @@ class SceneManger
 public:
 
 	template<class T,class... Args>
-	static void CreationSettings(const Args&... args);
+	static void CreationAndSet(const Args&... args);
 private:
 	static std::shared_ptr<Scene>m_rightNowScene;
 };
 
 //ì¬‚µ‚Äİ’è‚İ‚½‚¢‚È–¼‘O‚É
 template<class T, class ...Args>
-inline void SceneManger::CreationSettings(const Args& ...args)
+inline void SceneManger::CreationAndSet(const Args& ...args)
 {
 	if (m_rightNowScene != nullptr)
 	{
