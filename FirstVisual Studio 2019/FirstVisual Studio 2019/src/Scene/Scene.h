@@ -5,7 +5,7 @@ class Scene
 {
 public:
 	//デストラクタ
-	virtual ~Scene() {}
+	virtual ~Scene() = 0;
 
 	//開始処理
 	virtual void State() = 0;
