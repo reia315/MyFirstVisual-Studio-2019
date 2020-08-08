@@ -18,5 +18,5 @@ private:
 
 	char m_separated;
 
-	std::string m_createName;
+	std::string m_conditionsStr;
 };
