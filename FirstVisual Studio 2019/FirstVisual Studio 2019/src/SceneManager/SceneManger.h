@@ -12,7 +12,6 @@ private:
 	static std::shared_ptr<Scene>m_rightNowScene;
 };
 
-//ì¬‚µ‚Äİ’è‚İ‚½‚¢‚È–¼‘O‚É
 template<class T, class ...Args>
 inline void SceneManger::CreationAndSet(const Args& ...args)
 {
