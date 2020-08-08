@@ -11,4 +11,5 @@ public:
 private:
 
    static bool m_isEnd;
+
 };
