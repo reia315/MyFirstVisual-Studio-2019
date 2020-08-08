@@ -18,5 +18,5 @@ private:
 
 	char m_separated;
 
-	std::string m_conditionsStr;
+	std::string m_addComand;
 };
