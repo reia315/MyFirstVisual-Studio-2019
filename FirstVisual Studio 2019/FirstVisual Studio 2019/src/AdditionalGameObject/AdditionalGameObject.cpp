@@ -7,11 +7,11 @@
 
 AdditionalGameObject::AdditionalGameObject(const std::string& inputStr,char separated ) :
 	//ğŒ‚Æ‚¢‚¤ˆÓ–¡‚É‚µ‚½‚Ù‚¤‚ª‚¢‚¢
-	m_conditionsStr{inputStr},
+	m_addComand{inputStr},
 	m_separated { separated }{}
 
 AdditionalGameObject::AdditionalGameObject(const std::weak_ptr<const AdditionalGameObject>& other) :
-	m_conditionsStr{other.lock()->m_conditionsStr},
+	m_addComand{other.lock()->m_addComand},
 	m_separated{ other.lock()->m_separated } {}
 
 std::weak_ptr<Component> AdditionalGameObject::CloneComponent() const
@@ -26,7 +26,7 @@ void AdditionalGameObject::Input(const std::string& inputStr)
 	int idx = inputStr.find(m_separated);
 
 	std::string command = inputStr.substr(0, idx);
-	if (command == m_conditionsStr)
+	if (command == m_addComand)
 	{
 		std::string objectName = inputStr.substr(idx + 1, inputStr.length());
 
